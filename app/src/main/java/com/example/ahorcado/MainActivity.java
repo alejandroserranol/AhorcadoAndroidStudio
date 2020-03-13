@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         palabraOculta = eligePalabra();
         String barras = "";
         for (int i=0; i<palabraOculta.length(); i++){
-            barras += "_";
+            barras += "_ ";
         }
 
         ((TextView) findViewById(R.id.palabraConGuiones)).setText(barras);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String eligePalabra() {
-        String[] listaPalabras = {"HOLA", "VLADIKAKA", "CETYS", "BORREGUITO", "BABYYODA", "MANDO"};
+        String[] listaPalabras = {"HOLA", "CETYS", "BORREGUITO", "BABYYODA", "MANDO"};
         Random aleatorio = new Random(); //Variable aleatoria va a elegir una palabra al azahar
         int posicion = aleatorio.nextInt(listaPalabras.length);
         return listaPalabras[posicion].toUpperCase();
